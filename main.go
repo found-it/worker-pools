@@ -19,5 +19,5 @@ func main() {
 		"thing9",
 	}
 
-	pool.NewWorkerPool(3).WorkOn(&filler)
+	pool.NewWorkerPool(3).WorkOn(filler)
 }

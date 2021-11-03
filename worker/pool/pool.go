@@ -33,10 +33,10 @@ func NewWorkerPool(n int) *WorkerPool {
 	return &w
 }
 
-func (wp *WorkerPool) WorkOn(queue *[]string) error {
+func (wp *WorkerPool) WorkOn(queue []string) error {
 
 	work := make(chan string, 10)
-	for _, f := range *queue {
+	for _, f := range queue {
 		work <- f
 	}
 
